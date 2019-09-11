@@ -6,6 +6,8 @@ var readStream = fs.createReadStream("input.txt");
 readStream.setEncoding("UTF8");
 
 readStream.on("data",(chunk)=>{
+    console.log("chunk:"+chunk);
+    
     data += chunk;
 })
 readStream.on("end",()=>{
